@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js"
+      integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew=="
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main role="main" id="main">
+      <nav class="py-4 shadow-md">
+        <div
+          class="flex justify-between items-center mx-auto max-w-screen-lg mx-auto container"
+        >
+          <img class="w-40" src="./logo.jpg" alt="eternus logo" />
+          <h2 class="text-4xl text-blue-700 font-semibold">
+            Filterable Portfolio
+          </h2>
+        </div>
+      </nav>
+      <header class="h-80 bg-center bg-cover bg-no-repeat"></header>
+
+      <section class="bg-blue-400 py-4">
+        <div
+          class="filter-options filter-options--compound flex justify-around items-center mx-auto max-w-screen-lg mx-auto container"
+        >
+          <h3 class="text-white font-semibold border-b border-white px-2 py-1">
+            Filter By
+          </h3>
+
+          <div class="">
+            <div class="filter-group filter-group--compound js-industry">
+              <div class="dropdown">
+                <h3 class="cursor-pointer text-white font-semibold">
+                  Industry &darr;
+                </h3>
+                <div class="dropdown-content bg-white p-4">
+                  <div>
+                    <input type="checkbox" value="advertising" id="id-ad" />
+                    <label for="id-ad">Advertising</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" value="networking" id="id-net" />
+                    <label for="id-net">Networking</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" value="finance" id="id-fin" />
+                    <label for="id-fin">Finance</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" value="health" id="id-health" />
+                    <label for="id-health">Health</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6@sm">
+            <div class="filter-group filter-group--compound js-format">
+              <div class="dropdown">
+                <h3 class="cursor-pointer text-white font-semibold">
+                  Format &darr;
+                </h3>
+                <div class="dropdown-content bg-white p-4">
+                  <div class="ib">
+                    <input type="checkbox" value="article" id="id-art" />
+                    <label for="id-art">Article</label>
+                  </div>
+                  <div class="ib">
+                    <input type="checkbox" value="video" id="id-vid" />
+                    <label for="id-vid">Video</label>
+                  </div>
+                  <div class="ib">
+                    <input type="checkbox" value="case-study" id="id-cs" />
+                    <label for="id-cs">Case Study</label>
+                  </div>
+                  <div class="ib">
+                    <input type="checkbox" value="news" id="id-news" />
+                    <label for="id-news">News</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="">
+            <div class="filter-group filter-group--compound js-tag">
+              <div class="dropdown">
+                <h3 class="cursor-pointer text-white font-semibold">
+                  Tag &darr;
+                </h3>
+                <div class="dropdown-content bg-white p-4 w-60">
+                  <div>
+                    <input
+                      type="checkbox"
+                      value="digital-marketing"
+                      id="id-dm"
+                    />
+                    <label for="id-dm">Digital Marketing</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" value="email-marketing" id="id-em" />
+                    <label for="id-em">Email Marketing</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" value="search-engine" id="id-sem" />
+                    <label for="id-sem">Search Engine Marketing</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Current Active Filter-->
+      <section
+        class="flex justify-around items-center mx-auto max-w-screen-lg mx-auto container p-4"
+      >
+        <div class="industry-filter-section"></div>
+
+        <div class="format-filter-section"></div>
+
+        <div class="tag-filter-section"></div>
+      </section>
+
+      <div class="max-w-screen-lg mx-auto container">
+        <h1 class="mt-10 cat-title font-blue-700 font-semibold ml-2 text-3xl">
+          Portfolio
+        </h1>
+        <span class="count ml-2"></span>
+
+        <div
+          class="js-shuffle grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3"
+        >
+          <div
+            class="item-box shadow-md p-4 m-2"
+            data-category="digital-marketing"
+            data-industry="advertising"
+            data-format="article"
+          >
+            <div class="aspect">
+              <div class="aspect__inner">
+                <div>
+                  <img class="" src="./img/ecommerce.jpg" alt="" />
+                </div>
+                <h2 class="font-semibold my-2">
+                  eCommerce in the Philippines – What everyone should know?
+                </h2>
+                <p>
+                  Did you know that the number of online shoppers is expected to
+                  amount to 54.7m by 2024? Whether you are thinking of buying
+                  something or sell online, this article will be helpful for
+                  you. Did you know that the number of online shoppers is
+                  expected to amount to 54.7m by 2024? Whether you are thinking
+                  of buying something or sell online, this article will be
+                  helpful for you. Did you know that the number of online
+                  shoppers is expected to amount to 54.7m by 2024? Whether you
+                  are thinking of buying something or sell online, this article
+                  will be helpful for you.
+                </p>
+                <a
+                  class="my-2 border-b border-gray-700 inline-block"
+                  href="https://dnx.news/guest-column/ecommerce-in-the-philippines-what-everyone-should-know/"
+                  >Read More &rarr;</a
+                >
+                <h4 class="text-gray-400">
+                  Industry:<span class="text-gray-700"> Advertising</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Format:<span class="text-gray-700"> Article</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Tag:<span class="text-gray-700"></span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="item-box shadow-md p-4 m-2"
+            data-category="health"
+            data-industry="health"
+            data-format="article"
+          >
+            <div class="aspect">
+              <div class="aspect__inner">
+                <div>
+                  <img class="" src="./img/ibs.jpg" alt="" />
+                </div>
+                <h2 class="font-semibold my-2">
+                  Signs & Symptoms of Irritable Bowel Syndrome (IBS) in Women
+                </h2>
+                <p>
+                  Do hormones play a role in the development of Irritable Bowel
+                  Syndrome (IBS) symptoms in women? In this article, we will
+                  discuss how hormones play a role in the development of IBS in
+                  females, as well as the importance of hormonal balance in the
+                  prevention and treatment of IBS.
+                </p>
+                <a
+                  class="my-2 border-b border-gray-700 inline-block"
+                  href="https://medium.com/@ConsumerHealthDigest/signs-symptoms-of-irritable-bowel-syndrome-ibs-in-women-de28d360cd0c"
+                  >Read More &rarr;</a
+                >
+                <h4 class="text-gray-400">
+                  Industry:<span class="text-gray-700"> Health</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Format:<span class="text-gray-700"> Article</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Tag:<span class="text-gray-700"></span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="item-box shadow-md p-4 m-2"
+            data-category="health"
+            data-industry="health"
+            data-format="article"
+          >
+            <div class="aspect">
+              <div class="aspect__inner">
+                <div>
+                  <img class="" src="./img/sibo.jpg" alt="" />
+                </div>
+                <h2 class="font-semibold my-2">
+                  Small Intestinal Bacterial Overgrowth (SIBO)
+                </h2>
+                <p>
+                  SIBO is a condition that brings about excess bacterial growth
+                  in the small bowel. Though there are many studies that have
+                  highlighted the efficacy of various treatments, more research
+                  needs to be done on other factors and alternative treatments
+                  that can prevent SIBO.
+                </p>
+                <a
+                  class="my-2 border-b border-gray-700 inline-block"
+                  href="https://guthack.com/gut/small-intestinal-bacterial-overgrowth-sibo/"
+                  >Read More &rarr;</a
+                >
+                <h4 class="text-gray-400">
+                  Industry:<span class="text-gray-700"> Health</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Format:<span class="text-gray-700"> Article</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Tag:<span class="text-gray-700"></span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="item-box shadow-md p-4 m-2"
+            data-category="weight-loss"
+            data-industry="health"
+            data-format="article"
+          >
+            <div class="aspect">
+              <div class="aspect__inner">
+                <div>
+                  <img class="" src="./img/exercise.jpg" alt="" />
+                </div>
+                <h2 class="font-semibold my-2">
+                  Effective Exercises to Lose Stomach Fat
+                </h2>
+                <p>
+                  A tight abdomen is beneficial in that it offers protection to
+                  some vital organs such as the heart and the lungs as well as
+                  it helps us maintain good posture and balance coordination. It
+                  is said that diet alone cannot make one lose belly fat. There
+                  is a closer relationship between stomach fat and exercises. We
+                  need to exercise for stomach fat to burn faster.
+                </p>
+                <a
+                  class="my-2 border-b border-gray-700 inline-block"
+                  href="https://ezinearticles.com/?Effective-Exercises-to-Lose-Stomach-Fat&id=2787327"
+                  >Read More &rarr;</a
+                >
+                <h4 class="text-gray-400">
+                  Industry:<span class="text-gray-700"> Health</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Format:<span class="text-gray-700"> Article</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Tag:<span class="text-gray-700">Weight Loss</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="item-box shadow-md p-4 m-2"
+            data-category="weight-loss"
+            data-industry="health"
+            data-format="article"
+          >
+            <div class="aspect">
+              <div class="aspect__inner">
+                <div>
+                  <img class="" src="./img/food.jpg" alt="" />
+                </div>
+                <h2 class="font-semibold my-2">
+                  Foods That Cause Stomach Fat Or Bloating
+                </h2>
+                <p>
+                  A tight abdomen is beneficial in that it offers protection to
+                  some vital organs such as the heart and the lungs as well as
+                  it helps us maintain good posture and balance coordination. It
+                  is said that diet alone cannot make one lose belly fat. There
+                  is a closer relationship between stomach fat and exercises. We
+                  need to exercise for stomach fat to burn faster.
+                </p>
+                <a
+                  class="my-2 border-b border-gray-700 inline-block"
+                  href="https://ezinearticles.com/?Effective-Exercises-to-Lose-Stomach-Fat&id=2787327"
+                  >Read More &rarr;</a
+                >
+                <h4 class="text-gray-400">
+                  Industry:<span class="text-gray-700"> Health</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Format:<span class="text-gray-700"> Article</span>
+                </h4>
+                <h4 class="text-gray-400">
+                  Tag:<span class="text-gray-700">Weight Loss</span>
+                </h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="the-sizer flex flex-column"></div> -->
+        </div>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
